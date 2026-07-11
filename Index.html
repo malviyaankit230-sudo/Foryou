@@ -1,1 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>For Shivani ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+
+background:#050505;
+overflow:hidden;
+color:white;
+
+}
+
+#loading{
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+background:black;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+z-index:100;
+
+}
+
+#percent{
+
+font-size:45px;
+
+margin-top:20px;
+
+color:#ff4f81;
+
+}
+
+#main{
+
+display:none;
+
+width:100vw;
+
+height:100vh;
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.star{
+
+position:absolute;
+
+background:white;
+
+border-radius:50%;
+
+animation:twinkle 2s infinite alternate;
+
+}
+
+@keyframes twinkle{
+
+from{
+
+opacity:.2;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+.container{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+flex-direction:column;
+
+padding:30px;
+
+text-align:center;
+
+}
+
+h1{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+color:#ff4f81;
+
+}
+
+p{
+
+font-size:22px;
+
+line-height:1.8;
+
+max-width:700px;
+
+}
+
+button{
+
+margin-top:40px;
+
+padding:15px 40px;
+
+font-size:20px;
+
+border:none;
+
+border-radius:40px;
+
+background:#ff4f81;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+.fade{
+
+animation:fade 2s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="loading">
+
+<h1>Loading...</h1>
+
+<div id="percent">0%</div>
+
+</div>
+
+<div id="main">
+
+<div class="container fade">
+
+<h1>For Shivani ❤️</h1>
+
+<p>
+
+Aaj jo tum dekhne wali ho...
+
+Wo sirf ek website nahi hai.
+
+Ye meri feelings hain...❤️
+
+</p>
+
+<button onclick="startWebsite()">
+
+Continue ❤️
+
+</button>
+
+</div>
+
+</div>
+
+<audio id="music" loop>
+
+<source src="Fakira.mp3" type="audio/mpeg">
+
+</audio>
+
+<script>
+
+let p=0;
+
+let load=setInterval(()=>{
+
+p++;
+
+document.getElementById("percent").innerHTML=p+"%";
+
+if(p==100){
+
+clearInterval(load);
+
+document.getElementById("loading").style.display="none";
+
+document.getElementById("main").style.display="block";
+
+}
+
+},30);
+
+for(let i=0;i<150;i++){
+
+let s=document.createElement("div");
+
+s.className="star";
+
+let size=Math.random()*3+1;
+
+s.style.width=size+"px";
+
+s.style.height=size+"px";
+
+s.style.left=Math.random()*100+"vw";
+
+s.style.top=Math.random()*100+"vh";
+
+s.style.animationDelay=Math.random()*2+"s";
+
+document.body.appendChild(s);
+
+}
+
+function startWebsite(){
+
+document.getElementById("music").play();
+
+alert("Welcome Shivani ❤️");
+
+}
+
+</script>
+
+</body>
+
+</html>
