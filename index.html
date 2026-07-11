@@ -273,7 +273,19 @@ document.body.appendChild(s);
 
 function startWebsite(){
 
-document.getElementById("music").play();
+let music = document.getElementById("music");
+
+music.currentTime = 0;
+
+music.play().then(() => {
+
+console.log("Music Started");
+
+}).catch((err)=>{
+
+console.log(err);
+
+});
 
 alert("Welcome Shivani ❤️");
 
