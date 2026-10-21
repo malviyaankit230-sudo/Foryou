@@ -221,6 +221,15 @@ Continue ❤️
 
 </div>
 
+  
+<div id="page2" style="display:none; min-height:100vh; padding:30px; box-sizing:border-box; text-align:center; flex-direction:column; align-items:center; justify-content:center; background:#050505; color:white;">
+  <h1 style="color:#ff4f81;">Ek baat kahun? ❤️</h1>
+  <p style="font-size:21px; line-height:1.8;">
+    Shivani, tum meri life ka ek bahut special hissa ho.
+    Tumhare saath judi yaadein mere liye bahut keemti hain. ❤️
+  </p>
+  <button onclick="nextPage()">Aage chalo ❤️</button>
+</div>
 <audio id="music" loop>
 
 <source src="Fakira.mp3" type="audio/mpeg">
@@ -271,7 +280,16 @@ document.body.appendChild(s);
 
 }
 
+
 function startWebsite(){
+  document.getElementById("music").play().catch(()=>{});
+  document.getElementById("main").style.display = "none";
+  document.getElementById("page2").style.display = "flex";
+}
+
+function nextPage(){
+  alert("Agla surprise jaldi aa raha hai ❤️");
+  }
 
 let music = document.getElementById("music");
 
