@@ -248,6 +248,56 @@ Continue ❤️
   </button>
 
 </div>
+  
+<!-- PAGE 3 -->
+<div id="page3" style="display:none; min-height:100vh; box-sizing:border-box; padding:30px 22px; text-align:center; flex-direction:column; align-items:center; justify-content:center; background:linear-gradient(160deg,#18091f,#3b1238,#100b20); color:white;">
+
+  <div style="font-size:48px; animation:heartbeat 1.3s infinite;">💗</div>
+
+  <h1 style="color:#ff9fcf;">Tum mere liye special ho</h1>
+
+  <p style="font-size:19px; line-height:1.9;">
+    Shivani ❤️<br><br>
+    Tumhari smile, tumhari baatein,
+    aur tumhara apna sa andaaz...
+    in sab mein kuch aisa hai jo
+    tumhe mere liye alag banata hai. ✨<br><br>
+    Tum meri kahani ka ek bahut
+    khoobsurat hissa ho. 💖
+  </p>
+
+  <button onclick="showPage4()" style="padding:13px 25px; border:0; border-radius:25px; background:#ff75ad; color:white; font-size:17px;">
+    Ek aur baat ❤️
+  </button>
+</div>
+
+<!-- PAGE 4 -->
+<div id="page4" style="display:none; min-height:100vh; box-sizing:border-box; padding:30px 22px; text-align:center; flex-direction:column; align-items:center; justify-content:center; background:linear-gradient(160deg,#100b20,#35152f,#1b0b24); color:white;">
+
+  <div style="font-size:46px;">💌</div>
+
+  <h1 style="color:#ffb0d5;">Kuch baatein dil se...</h1>
+
+  <p style="font-size:19px; line-height:1.9;">
+    Har feeling ko words mein samjhana
+    aasaan nahi hota. ❤️<br><br>
+    Bas itna chahta hoon ki tum hamesha
+    khush raho, apne dreams poore karo,
+    aur zindagi mein aage badhti raho. ✨<br><br>
+    Tumhari khushi mere liye important hai.
+  </p>
+
+  <button onclick="alert('Hamari memories ka surprise next hai ❤️')" style="padding:13px 25px; border:0; border-radius:25px; background:#ff75ad; color:white; font-size:17px;">
+    Our Memories 📸
+  </button>
+</div>
+
+<style>
+@keyframes heartbeat {
+  0%,100% { transform:scale(1); }
+  50% { transform:scale(1.18); }
+}
+</style>
 <audio id="music" loop>
 
 <source src="Fakira.mp3" type="audio/mpeg">
@@ -310,6 +360,11 @@ function nextPage(){
   document.getElementById("page2").style.display = "none";
   document.getElementById("page3").style.display = "flex";
 }
+  
+function showPage4(){
+  document.getElementById("page3").style.display = "none";
+  document.getElementById("page4").style.display = "flex";
+  }
 
 </script>
 
