@@ -305,21 +305,10 @@ function startWebsite(){
   document.getElementById("page2").style.display = "flex";
 }
 
-function nextPage(){
-  const music = document.getElementById("music");
 
+function nextPage(){
   document.getElementById("page2").style.display = "none";
   document.getElementById("page3").style.display = "flex";
-
-  music.pause();
-  music.src = "Kalank.mp3";
-  music.load();
-
-  music.play().catch((error) => {
-    alert("Next song play nahi hua. Music button se play karna try karo.");
-    console.log(error);
-  });
-
 }
 
 </script>
